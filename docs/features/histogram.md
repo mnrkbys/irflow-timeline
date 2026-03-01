@@ -49,8 +49,7 @@ The histogram's date extraction engine handles a wide range of timestamp formats
 | Format | Example |
 |--------|---------|
 | ISO 8601 | `2024-01-15T14:30:00Z` |
-| US date | `01/15/2024` or `1/15/2024` |
-| European date | `15/01/2024` |
+| US date (M/D/YYYY) | `01/15/2024` or `1/15/2024` |
 | Month name | `Feb 5th 2026`, `February 5, 2026`, `5 Feb 2026` |
 | Unix seconds | `1706360000` (10 digits) |
 | Unix milliseconds | `1706360000000` (13 digits) |

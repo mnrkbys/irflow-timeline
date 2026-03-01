@@ -31,9 +31,9 @@ IRFlow Timeline supports exporting filtered data and generating investigation re
 ### Export to XLS
 
 1. **Menu:** File > Export (`Cmd+E`)
-2. Select **XLS** format (legacy binary Excel)
+2. Select **XLS** format
 3. Choose a save location
-4. Compatible with older Excel versions and third-party tools
+4. Writes OOXML format with a `.xls` extension for compatibility with tools that expect the `.xls` extension
 
 ### Export Selected Rows
 
@@ -46,7 +46,7 @@ IRFlow Timeline supports exporting filtered data and generating investigation re
 
 Full export (File > Export) includes:
 
-- All columns (visible and hidden)
+- All visible columns (hidden columns are excluded)
 - Only rows matching current filters, search, and date range
 - Bookmarked/tagged rows if those filters are active
 - Data in the current sort order

@@ -1,4 +1,4 @@
-// Process tree chain-based detection rules — 344 rules from irflow-detection-rules.sql
+// Process tree chain-based detection rules — 342 rules from irflow-detection-rules.sql
 // Format: [parent, child, severity(0-3), description with MITRE ATT&CK technique]
 const CHAIN_RULES = [
 // Execution

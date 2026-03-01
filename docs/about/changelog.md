@@ -8,8 +8,8 @@
   - Brute Force detection (T1110.001): 5+ failed logons from same source within 5-minute window
   - Password Spray detection (T1110.003): same source fails against 3+ targets within 30 minutes
   - Credential Compromise detection (T1078): failed logon followed by success within 10 minutes
-  - Impacket Execution detection (T1569.002): 10 patterns across 5 variants (smbexec.py, wmiexec.py, dcomexec.py, atexec.py, psexec.py)
-  - RMM Tool detection (T1219): 31 remote monitoring tools scanned in process/service events
+  - Impacket Execution detection (T1569.002): 11 patterns across 5 variants (smbexec.py, wmiexec.py, dcomexec.py, atexec.py, psexec.py)
+  - RMM Tool detection (T1219): 30 remote monitoring tools scanned in process/service events
   - Lateral Pivot detection (T1021): identifies middle hosts in multi-hop chains
   - First-Seen Connection flagging: connections in first 1% of timeline or first from a source host
   - New Findings tab with severity summary, MITRE badges, and Filter Events / View in Graph actions

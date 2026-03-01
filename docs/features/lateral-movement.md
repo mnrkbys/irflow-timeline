@@ -183,8 +183,8 @@ The Findings tab displays automated attack pattern detections with MITRE ATT&CK 
 | **Brute Force** | T1110.001 | High | 5+ failed logons (4625) from same source to same target within 5 minutes |
 | **Password Spray** | T1110.003 | High | Same source fails against 3+ different targets within 30 minutes |
 | **Credential Compromise** | T1078 | Critical | Failed logon (4625) followed by successful logon (4624) from same source to same target within 10 minutes |
-| **Impacket Execution** | T1569.002 | Critical | 10 detection patterns across 5 Impacket variants (see below) |
-| **RMM Tool Detection** | T1219 | High | 31 remote monitoring tools detected in process/service events |
+| **Impacket Execution** | T1569.002 | Critical | 11 detection patterns across 5 Impacket variants (see below) |
+| **RMM Tool Detection** | T1219 | High | 30 remote monitoring tools detected in process/service events |
 | **Lateral Pivot** | T1021 | High | Host identified as middle node in multi-hop lateral movement chain |
 | **First Seen Connection** | T1021 | Low | Connection is within the first 1% of the timeline or is the first connection from a source host |
 
@@ -200,11 +200,11 @@ The Impacket detection engine scans process creation (EID 4688/1), service insta
 | **atexec.py** | Output to `\Temp\*.tmp` with redirect, hardcoded `StartBoundary 2015-07-15T20:35:13` |
 | **psexec.py** | RemCom named pipes (`remcom_communicat`, `remcom_stdin/stdout/stderr`), random 4-char service names, service binary using command interpreter |
 
-Service-based detections (EID 7045/4697) also flag random service names — 4-character names (psexec.py pattern) and 8-character names (smbexec.py pattern) — with a common English word exclusion list to reduce false positives.
+Service-based detections (EID 7045/4697) also flag random service names — 4-character names (psexec.py pattern) and 7-character names (smbexec.py pattern) — with a common English word exclusion list to reduce false positives.
 
 #### RMM Tool Detection
 
-Scans process and service events for 31 remote monitoring and management tools commonly abused in intrusions:
+Scans process and service events for 30 remote monitoring and management tools commonly abused in intrusions:
 
 ConnectWise ScreenConnect, AnyDesk, TeamViewer, Atera, NetSupport Manager, Splashtop, RustDesk, PDQ Connect, MeshAgent/MeshCentral, Action1, Ammyy Admin, Remote Utilities, SimpleHelp, TacticalRMM, FleetDeck, Level.io, DWService, ngrok, ISL Online, HopToDesk, Lite Manager, UltraVNC, TigerVNC, RAdmin, Zoho Assist, Pulseway, LabTech/Automate, Tailscale, Kaseya VSA, N-able/SolarWinds
 
@@ -360,12 +360,14 @@ The tracker automatically excludes noise that would clutter the graph:
 
 ### Excluded Sources
 - `127.0.0.1` and `::1` — local loopback
-- `-` — empty source addresses
+- `0.0.0.0` — unspecified address
+- `-` and empty values — missing source addresses
 
 ### Excluded Accounts
 - `SYSTEM`
 - `LOCAL SERVICE`
 - `NETWORK SERVICE`
+- `ANONYMOUS LOGON`
 - `DWM-*` (Desktop Window Manager)
 - `UMFD-*` (User Mode Font Driver)
 - Machine accounts (`*$`)

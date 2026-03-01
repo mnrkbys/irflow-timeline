@@ -3932,7 +3932,7 @@ export default function App() {
           <div style={{ textAlign: "center" }}>
             <div style={{ fontSize: 40, marginBottom: 8 }}>⌬</div>
             <h2 style={{ margin: "0 0 4px", fontSize: 20, fontWeight: 700, color: th.text, fontFamily: "-apple-system, sans-serif" }}>IRFlow Timeline</h2>
-            <div style={{ fontSize: 12, color: th.textMuted, marginBottom: 16, fontFamily: "-apple-system, sans-serif" }}>Version 1.0.2-beta</div>
+            <div style={{ fontSize: 12, color: th.textMuted, marginBottom: 16, fontFamily: "-apple-system, sans-serif" }}>Version 1.0.3-beta</div>
             <div style={{ textAlign: "left", background: th.bgAlt, borderRadius: 8, padding: 16, marginBottom: 16 }}>
               <p style={{ margin: "0 0 8px", fontSize: 12, color: th.text, lineHeight: 1.6, fontFamily: "-apple-system, sans-serif" }}>
                 A high-performance native macOS timeline analysis tool built for DFIR professionals, capable of ingesting millions of rows from CSV, XLSX, EVTX, and Plaso files without breaking a sweat.

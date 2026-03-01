@@ -95,11 +95,11 @@ You can also set date ranges by brush-selecting on the [Histogram](/features/his
 
 ### Advanced Filters
 
-Open **Tools > Advanced Filter** for SQL WHERE-style conditions:
+Open **View > Edit Filter** for SQL WHERE-style conditions:
 
 - Build complex filters with AND/OR logic
 - Combine multiple conditions on different columns
-- Use operators: equals, not equals, contains, starts with, ends with, greater than, less than
+- Use operators: equals, not equals, contains, not contains, starts with, ends with, greater than, less than, is empty, is not empty, regex
 - Save and load filter presets
 
 ### Tag Filters

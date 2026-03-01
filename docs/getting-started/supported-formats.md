@@ -65,18 +65,19 @@ Native binary parsing of Windows Event Log files using the `@ts-evtx` library. N
 ### Features
 
 - **Binary parsing** — reads EVTX format directly, no conversion step
-- **Dynamic schema discovery** — samples the first 10,000 events to discover all available fields
+- **Dynamic schema discovery** — samples the first 500 events to discover all available fields
 - **Fixed fields** extracted from every event:
 
 | Field | Description |
 |-------|-------------|
-| `RecordNumber` | Sequential event record number |
-| `TimeCreated` | Event timestamp |
-| `EventId` | Windows event identifier |
+| `datetime` | Event timestamp |
+| `RecordId` | Sequential event record number |
+| `EventID` | Windows event identifier |
 | `Provider` | Event source provider name |
+| `Level` | Event severity level |
 | `Channel` | Log channel (Security, System, etc.) |
 | `Computer` | Source computer name |
-| `UserId` | Security identifier (SID) |
+| `Message` | Event message text |
 
 - **Discovered fields** — provider-specific payload fields are extracted automatically based on the events found during schema discovery
 - **Adaptive batch insertion** — batch size auto-tunes based on column count for optimal throughput

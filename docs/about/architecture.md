@@ -33,7 +33,7 @@ The preload script creates a secure bridge between the renderer and main process
 
 The main process runs with full Node.js access and manages:
 - Window lifecycle and native menus
-- IPC handler registration (48 handlers)
+- IPC handler registration (46 handlers)
 - File dialog management
 - Export orchestration (CSV, TSV, XLSX, XLS, HTML)
 - Session save/load coordination
@@ -69,7 +69,7 @@ CREATE TABLE color_rules (id, col_name, condition, value, bg_color, fg_color);
 
 ### Parser Layer
 
-**File:** `parser.js` (~1,054 lines)
+**File:** `parser.js` (~1,094 lines)
 
 Streaming parsers convert source files into SQLite batch inserts:
 
@@ -85,7 +85,7 @@ Streaming parsers convert source files into SQLite batch inserts:
 
 ```
 File → Parser (streaming chunks) → Batch Arrays → SQLite INSERT
-                                    (50K rows)     (prepared statements)
+                                    (100K rows)    (prepared statements)
 ```
 
 1. Parser reads file in chunks (128MB for CSV)

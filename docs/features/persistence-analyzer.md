@@ -181,7 +181,7 @@ RMM tools are not inherently malicious, but they are high-confidence indicators 
 
 The analyzer automatically suppresses known-legitimate findings to reduce noise:
 
-- **AV/EDR vendors** — Service installations from 14 vendors (CrowdStrike, SentinelOne, Microsoft Defender, Cortex XDR, Carbon Black, Sophos, Symantec, McAfee/Trellix, Kaspersky, ESET, Trend Micro, Bitdefender, Cylance, Elastic, Fortinet) are suppressed when they match expected installation paths
+- **AV/EDR vendors** — Service installations from 15 vendors (Cortex XDR, Microsoft Defender, CrowdStrike, SentinelOne, Carbon Black, Sophos, Symantec, McAfee/Trellix, Kaspersky, ESET, Trend Micro, Bitdefender, Cylance, Elastic, Fortinet) are suppressed when they match expected installation paths
 - **Browser update services** — Chrome, Edge, Firefox, Brave, Opera, and Vivaldi update services from expected `Program Files` paths are downgraded to low severity
 
 This whitelisting prevents hundreds of false-positive service events from cluttering results while preserving detection of the same service names running from unexpected paths (flagged as browser mimicry).
